@@ -104,7 +104,7 @@ make clean
 make -j $(nproc)
 ```
 
-take a break - it finishes in about 40 min on RPi 3B+, twice as long on RPi 2B+
+take a break - it finishes in about 30 min on RPi 3B+, twice as long on RPi 2B+
 
 
 ### 8. when finished we should have excecutable binary HandBrakeCLI in our build folder
