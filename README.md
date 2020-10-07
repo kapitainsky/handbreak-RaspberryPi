@@ -1,6 +1,6 @@
-# handbreakCLI-RaspberryPi
+# HandBreak - RaspberryPi
 
-building handbreakCLI on raspberry pi including x265 codec
+building HandBreak on raspberry pi including x265 codec
 
 Does it make sense to build handbreak on raspberry pi? Be warned it wont be fast. 10-20 times slower that i5 Intel CPU laptop. But it works so why not.
 
@@ -9,8 +9,14 @@ I have managed sucessfully compile it on RPi 2B+, 3 and 3B+ running raspbian 4.1
 
 ### 1. install all dependencies
 
+For CLI only:
 ```
 sudo apt-get install git autoconf automake build-essential cmake libass-dev libbz2-dev libfontconfig1-dev libfreetype6-dev libfribidi-dev libharfbuzz-dev libjansson-dev liblzma-dev libmp3lame-dev libogg-dev libopus-dev libsamplerate-dev libspeex-dev libtheora-dev libtool libtool-bin libvorbis-dev libx264-dev libxml2-dev m4 make patch pkg-config python tar yasm zlib1g-dev libvpx-dev xz-utils bzip2 zlib1g
+```
+
+For GUI also add:
+```
+sudo apt-get install intltool libappindicator-dev libdbus-glib-1-dev libglib2.0-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgtk-3-dev libgudev-1.0-dev libnotify-dev libwebkitgtk-3.0-dev
 ```
 
 
@@ -47,10 +53,15 @@ echo "X265.CONFIGURE.extra  +=  -DENABLE_ASSEMBLY=OFF -DENABLE_PIC=ON -DENABLE_A
 
 ### 5. now we can configure our project
 
+For CLI only:
 ```
 ./configure --launch-jobs=$(nproc) --disable-gtk --disable-nvenc --disable-qsv --enable-fdk-aac
 ```
 
+For CLI and GUI:
+```
+./configure --launch-jobs=$(nproc) --disable-nvenc --disable-qsv --enable-fdk-aac
+```
 
 ### 6. we have to make quick-and-dirty hack to x265 source code
 
@@ -107,8 +118,10 @@ make -j $(nproc)
 take a break - it finishes in about 30 min on RPi 3B+, twice as long on RPi 2B+
 
 
-### 8. when finished we should have excecutable binary HandBrakeCLI in our build folder
+### 8. when finished we should have excecutable binaries ready
 
+- CLI: build/HandBrakeCLI
+- GUI: build/gtk/src/ghb
 
 
 ### 9. we can use it straight away or install properly
@@ -118,7 +131,7 @@ sudo make --directory=. install
 ```
 
 
-### 10. Basic usage
+### 10. Basic CLI usage
 
 ```
 HandBrakeCLI -i PATH-OF-SOURCE-FILE -o NAME-OF-OUTPUT-FILE --"preset-name"
@@ -151,3 +164,4 @@ example:
 
 [https://handbrake.fr/docs/en/1.2.0/cli/cli-options.html](https://handbrake.fr/docs/en/1.2.0/cli/cli-options.html)
 
+[GUI compilation - https://github.com/rafaelmaeuer/handbrake-raspberry-pi](https://github.com/rafaelmaeuer/handbrake-raspberry-pi)
