@@ -21,13 +21,13 @@ sudo curl -L 'http://ftp.debian.org/debian/pool/main/n/nasm/nasm_2.14-1_armhf.de
 ```
 
 
-### 3. we clone handbreak from github and jump few commits forward from 1.2.2
-
-only then we can disable nvidia and intel qsv, it was not possible in 1.2.2
+### 3. get HandBreak source code
 
 ```
-git clone https://github.com/HandBrake/HandBrake.git && cd HandBrake && git checkout c7119499f5a2da7e5be0afd50a6757778fed53e7
+git clone -b 1.3.3 https://github.com/HandBrake/HandBrake.git
 ```
+
+to get 1.3.3 version
 
 
 ### 4. we have to add extra configure parameters to X265 module
