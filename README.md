@@ -57,16 +57,11 @@ sudo apt-get install meson nasm
 ### 3. get HandBreak source code
 
 ```
-git clone -b 1.4.1 https://github.com/HandBrake/HandBrake.git
+git clone -b 1.4.1 https://github.com/HandBrake/HandBrake.git && cd HandBrake
 ```
 
 to get 1.4.1 version
-<br>
-<br>
 
-```
-cd HandBrake
-```
 <br>
 
 ### 4. we have to add extra configure parameters to X265 module
