@@ -9,6 +9,9 @@ Does it make sense to build handbreak on raspberry pi? Be warned it wont be fast
 I have managed sucessfully compile it on RPi 2B+, 3, 3B+ and 4 running raspbian based on Debian 9 and 10.
 <br>
 
+So let's DYI
+<br>
+
 ### 1. install all dependencies
 
 ```
