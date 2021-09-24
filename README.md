@@ -200,6 +200,6 @@ example:
 
 [https://www.linux.com/learn/how-convert-videos-linux-using-command-line](https://www.linux.com/learn/how-convert-videos-linux-using-command-line)
 
-[https://handbrake.fr/docs/en/1.2.0/cli/cli-options.html](https://handbrake.fr/docs/en/1.2.0/cli/cli-options.html)
+[https://handbrake.fr/docs/en/1.3.0/cli/cli-options.html](https://handbrake.fr/docs/en/1.3.0/cli/cli-options.html)
 
 [GUI compilation - https://github.com/rafaelmaeuer/handbrake-raspberry-pi](https://github.com/rafaelmaeuer/handbrake-raspberry-pi)
