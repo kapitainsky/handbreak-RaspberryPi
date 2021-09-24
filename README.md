@@ -10,20 +10,43 @@ I have managed sucessfully compile it on RPi 2B+, 3 and 3B+ running raspbian 4.1
 ### 1. install all dependencies
 
 For CLI only:
+
 ```
-sudo apt-get install git autoconf automake build-essential cmake libass-dev libbz2-dev libfontconfig1-dev libfreetype6-dev libfribidi-dev libharfbuzz-dev libjansson-dev liblzma-dev libmp3lame-dev libogg-dev libopus-dev libsamplerate-dev libspeex-dev libtheora-dev libtool libtool-bin libvorbis-dev libx264-dev libxml2-dev m4 make patch pkg-config python tar yasm zlib1g-dev libvpx-dev xz-utils bzip2 zlib1g
+sudo apt-get install autoconf automake build-essential cmake git libass-dev libbz2-dev libfontconfig1-dev libfreetype6-dev libfribidi-dev libharfbuzz-dev libjansson-dev liblzma-dev libmp3lame-dev libnuma-dev libogg-dev libopus-dev libsamplerate-dev libspeex-dev libtheora-dev libtool libtool-bin libvorbis-dev libx264-dev libxml2-dev libvpx-dev m4 make ninja-build patch pkg-config python tar zlib1g-dev patch libvpx-dev xz-utils bzip2 zlib1g libturbojpeg0-dev
 ```
 
+for Debian 10 add: `sudo apt-get install appstream`
+
 For GUI also add:
+
+Debian 9:
 ```
 sudo apt-get install intltool libappindicator-dev libdbus-glib-1-dev libglib2.0-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgtk-3-dev libgudev-1.0-dev libnotify-dev libwebkitgtk-3.0-dev
 ```
 
+Debian 10:
+```
+sudo apt-get install intltool libappindicator-dev libdbus-glib-1-dev libglib2.0-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgtk-3-dev libgudev-1.0-dev libnotify-dev libwebkit2gtk-4.0-dev
+```
 
-### 2. debian nasm is too old we need newer one
+### 2. Install nasm and meson
+
+In Debian 9 nasm and meson are too old we need newer ones:
 
 ```
 sudo curl -L 'http://ftp.debian.org/debian/pool/main/n/nasm/nasm_2.14-1_armhf.deb' -o /var/cache/apt/archives/nasm_2.14-1_armhf.deb && sudo dpkg -i /var/cache/apt/archives/nasm_2.14-1_armhf.deb
+```
+
+```
+sudo add-apt-repository -s 'deb http://deb.debian.org/debian stretch-backports main'
+sudo apt-get update
+sudo apt-get -t stretch-backports install meson
+```
+
+In Debian 10:
+
+```
+sudo apt-get install meson nasm
 ```
 
 
@@ -34,6 +57,10 @@ git clone -b 1.3.3 https://github.com/HandBrake/HandBrake.git
 ```
 
 to get 1.3.3 version
+
+```
+cd HandBrake
+```
 
 
 ### 4. we have to add extra configure parameters to X265 module
@@ -83,6 +110,7 @@ Wait unitl you see that files have been downloaded then CTRL-C
 ```
 nano ./contrib/x265/x265_3.0/source/common/primitives.cpp
 ```
+note that `x265_3.0` folder can be different e.g. `x265_3.5`. Change it accordingly. 
 
 and change following section - at the end of the file:
 
