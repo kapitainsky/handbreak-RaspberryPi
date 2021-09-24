@@ -4,7 +4,7 @@ building HandBreak on raspberry pi including x265 codec
 
 Does it make sense to build handbreak on raspberry pi? Be warned it wont be fast. 10-20 times slower that i5 Intel CPU laptop. But it works so why not.
 
-I have managed sucessfully compile it on RPi 2B+, 3 and 3B+ running raspbian 4.14.98
+I have managed sucessfully compile it on RPi 2B+, 3 and 3B+ and 4 running raspbian based on Debian 9 and 10.
 
 
 ### 1. install all dependencies
@@ -43,7 +43,7 @@ sudo apt-get update
 sudo apt-get -t stretch-backports install meson
 ```
 
-In Debian 10:
+In Debian 10 things are easier:
 
 ```
 sudo apt-get install meson nasm
@@ -53,10 +53,10 @@ sudo apt-get install meson nasm
 ### 3. get HandBreak source code
 
 ```
-git clone -b 1.3.3 https://github.com/HandBrake/HandBrake.git
+git clone -b 1.4.1 https://github.com/HandBrake/HandBrake.git
 ```
 
-to get 1.3.3 version
+to get 1.4.1 version
 
 ```
 cd HandBrake
@@ -133,7 +133,7 @@ int PFX(cpu_fast_neon_mrc_test)(void) { return 0; }
 we just change == condition to !=
 
 
-### 7. we can build all now
+### 7. Let's build
 
 ```
 make clean
@@ -141,11 +141,14 @@ make clean
 
 if you see some errors after `make clean` you can safely ignore them. This step is only needed to clean x265 interrupted build.
 
+
+and now we can start full Handbreak build
+
 ```
 make -j $(nproc)
 ```
 
-take a break - it finishes in about 30 min on RPi 3B+, twice as long on RPi 2B+
+you can take a break - It takes time. It finishes in about 30 min on RPi 3B+, twice as long on RPi 2B+
 
 
 ### 8. when finished we should have excecutable binaries ready
