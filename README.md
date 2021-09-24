@@ -109,10 +109,10 @@ cd build
 ```
 
 ```
-make -j 4 x265
+make x265
 ```
 
-Wait unitl you see that files have been downloaded then CTRL-C
+Wait unitl you see that files have been downloaded and patched. It is the first thing happening. Then stop the rest by pressing CTRL-C. 
 
 ```
 nano ./contrib/x265/x265_3.0/source/common/primitives.cpp
