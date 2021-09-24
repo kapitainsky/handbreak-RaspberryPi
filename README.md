@@ -157,7 +157,7 @@ now we can start full Handbreak build
 make -j $(nproc)
 ```
 
-you can take a break - It takes time. 25 min on RPi 4. And many times longer on older RPi models. 
+you can take a break - it takes some time. Approximately 25 min on RPi 4. And much longer on older RPi models. 
 <br>
 <br>
 
