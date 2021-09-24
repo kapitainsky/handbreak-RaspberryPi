@@ -42,8 +42,10 @@ sudo curl -L 'http://ftp.debian.org/debian/pool/main/n/nasm/nasm_2.14-1_armhf.de
 ```
 
 ```
-sudo add-apt-repository -s 'deb http://deb.debian.org/debian stretch-backports main'
-sudo apt-get update
+sudo add-apt-repository -s 'deb http://deb.debian.org/debian stretch-backports main' \
+&& \
+sudo apt-get update \
+&& \
 sudo apt-get -t stretch-backports install meson
 ```
 
