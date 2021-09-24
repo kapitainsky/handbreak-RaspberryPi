@@ -9,15 +9,13 @@ I have managed sucessfully compile it on RPi 2B+, 3 and 3B+ and 4 running raspbi
 
 ### 1. install all dependencies
 
-For CLI only:
-
 ```
 sudo apt-get install autoconf automake build-essential cmake git libass-dev libbz2-dev libfontconfig1-dev libfreetype6-dev libfribidi-dev libharfbuzz-dev libjansson-dev liblzma-dev libmp3lame-dev libnuma-dev libogg-dev libopus-dev libsamplerate-dev libspeex-dev libtheora-dev libtool libtool-bin libvorbis-dev libx264-dev libxml2-dev libvpx-dev m4 make ninja-build patch pkg-config python tar zlib1g-dev patch libvpx-dev xz-utils bzip2 zlib1g libturbojpeg0-dev
 ```
 
 for Debian 10 add: `sudo apt-get install appstream`
 
-For GUI also add:
+If you want GUI version also add:
 
 Debian 9:
 ```
