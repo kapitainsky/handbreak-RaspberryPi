@@ -111,6 +111,8 @@ we just change == condition to !=
 make clean
 ```
 
+if you see some errors after `make clean` you can safely ignore them. This step is only needed to clean x265 interrupted build.
+
 ```
 make -j $(nproc)
 ```
