@@ -2,7 +2,7 @@
 
 building HandBreak on raspberry pi including x265 codec
 
-![image](https://user-images.githubusercontent.com/15635386/134711026-f6571ce2-64ee-4430-aedd-286430437273.png)
+<img width="1205" alt="image" src="https://user-images.githubusercontent.com/15635386/134727593-a8082fb1-9b45-4350-9c47-d77dcda3393b.png">
 
 Does it make sense to build handbreak on raspberry pi? Be warned it wont be fast. 10-20 times slower that i5 Intel CPU laptop. But it works so why not.
 
