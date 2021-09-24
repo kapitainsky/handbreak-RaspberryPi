@@ -98,7 +98,7 @@ For CLI and GUI:
 ### 6. we have to make quick-and-dirty hack to x265 source code
 
 
-We compile with DENABLE_ASSEMBLY=OFF but x265 code does not take it into account that it is not handled right for ARMv7 (I have reported it to X265 guys so maybe in the future it wont be required if they modify their code)
+We compile with DENABLE_ASSEMBLY=OFF but x265 code does not take into account that it is not handled correctly for ARMv7 (I have reported it to X265 guys so maybe in the future it wont be required if they modify their code)
 
 but first we have to start building it so it is downloaded
 
