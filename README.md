@@ -116,7 +116,7 @@ Now we can make it raspberry pi compatible:
 ```
 nano ./contrib/x265/x265_3.5/source/common/primitives.cpp
 ```
-note that `x265_3.5` folder can be different. Change it accordingly. 
+note that `x265_3.5` folder can be different as x265 software is active project and its version can change. Modify it accordingly. 
 
 and change following section - at the end of the file:
 
