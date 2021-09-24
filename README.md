@@ -7,7 +7,7 @@ building HandBreak on raspberry pi including x265 codec
 Does it make sense to build handbreak on raspberry pi? Be warned it wont be fast. 10-20 times slower that i5 Intel CPU laptop. But it works so why not.
 
 I have managed sucessfully compile it on RPi 2B+, 3 and 3B+ and 4 running raspbian based on Debian 9 and 10.
-
+<br>
 
 ### 1. install all dependencies
 
@@ -28,6 +28,7 @@ Debian 10:
 ```
 sudo apt-get install intltool libappindicator-dev libdbus-glib-1-dev libglib2.0-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgtk-3-dev libgudev-1.0-dev libnotify-dev libwebkit2gtk-4.0-dev
 ```
+<br>
 
 ### 2. Install nasm and meson
 
@@ -48,7 +49,7 @@ In Debian 10 things are easier:
 ```
 sudo apt-get install meson nasm
 ```
-
+<br>
 
 ### 3. get HandBreak source code
 
@@ -61,7 +62,7 @@ to get 1.4.1 version
 ```
 cd HandBrake
 ```
-
+<br>
 
 ### 4. we have to add extra configure parameters to X265 module
 
@@ -76,7 +77,7 @@ echo "X265_12.CONFIGURE.extra +=  -DENABLE_ASSEMBLY=OFF -DENABLE_PIC=ON -DENABLE
 && \
 echo "X265.CONFIGURE.extra  +=  -DENABLE_ASSEMBLY=OFF -DENABLE_PIC=ON -DENABLE_AGGRESSIVE_CHECKS=ON -DENABLE_TESTS=ON -DCMAKE_SKIP_RPATH=ON" >>  ./contrib/x265/module.defs
 ```
-
+<br>
 
 ### 5. now we can configure our project
 
@@ -89,6 +90,7 @@ For CLI and GUI:
 ```
 ./configure --launch-jobs=$(nproc) --disable-nvenc --disable-qsv --enable-fdk-aac
 ```
+<br>
 
 ### 6. we have to make quick-and-dirty hack to x265 source code
 
@@ -131,9 +133,10 @@ int PFX(cpu_fast_neon_mrc_test)(void) { return 0; }
 ```
 
 we just change == condition to !=
+<br>
+<br>
 
-
-### 7. Let's build
+### 7. let's build
 
 ```
 make clean
@@ -149,22 +152,23 @@ make -j $(nproc)
 ```
 
 you can take a break - It takes time. It finishes in about 30 min on RPi 3B+, twice as long on RPi 2B+
-
+<br>
+<br>
 
 ### 8. when finished we should have excecutable binaries ready
 
 - CLI: build/HandBrakeCLI
 - GUI: build/gtk/src/ghb
-
+<br>
 
 ### 9. we can use it straight away or install properly
 
 ```
 sudo make --directory=. install
 ```
+<br>
 
-
-### 10. Basic CLI usage
+### 10. basic CLI usage
 
 ```
 HandBrakeCLI -i PATH-OF-SOURCE-FILE -o NAME-OF-OUTPUT-FILE --"preset-name"
