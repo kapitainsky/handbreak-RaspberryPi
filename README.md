@@ -71,7 +71,7 @@ cd HandBrake
 
 ### 4. we have to add extra configure parameters to X265 module
 
-Without it won't compile on RPi
+Without it compilation will fail on RPi
 
 ```
 echo "X265_8.CONFIGURE.extra +=  -DENABLE_ASSEMBLY=OFF -DENABLE_PIC=ON -DENABLE_AGGRESSIVE_CHECKS=ON -DENABLE_TESTS=ON -DCMAKE_SKIP_RPATH=ON" >> ./contrib/x265_8bit/module.defs \
