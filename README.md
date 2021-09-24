@@ -149,7 +149,7 @@ make clean
 if you see some errors after `make clean` you can safely ignore them. This step is only needed to clean x265 interrupted build.
 
 
-and now we can start full Handbreak build
+now we can start full Handbreak build
 
 ```
 make -j $(nproc)
