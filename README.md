@@ -62,7 +62,7 @@ git clone -b 1.4.1 https://github.com/HandBrake/HandBrake.git
 
 to get 1.4.1 version
 <br>
-
+<br>
 
 ```
 cd HandBrake
