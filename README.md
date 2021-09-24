@@ -120,7 +120,7 @@ nano ./contrib/x265/x265_3.5/source/common/primitives.cpp
 ```
 note that `x265_3.5` folder can be different as x265 software is active project and its version can change. Modify it accordingly. 
 
-change the following section - at the end of the file:
+change the following precompiler directive - at the end of the file:
 
 ```
 #if X265_ARCH_ARM == 0
