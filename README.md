@@ -6,7 +6,7 @@ building HandBreak on raspberry pi including x265 codec
 
 Does it make sense to build handbreak on raspberry pi? Be warned it wont be fast. 10-20 times slower that i5 Intel CPU laptop. But it works so why not.
 
-I have managed sucessfully compile it on RPi 2B+, 3 and 3B+ and 4 running raspbian based on Debian 9 and 10.
+I have managed sucessfully compile it on RPi 2B+, 3, 3B+ and 4 running raspbian based on Debian 9 and 10.
 <br>
 
 ### 1. install all dependencies
