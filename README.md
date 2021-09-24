@@ -138,7 +138,7 @@ int PFX(cpu_fast_neon_mrc_test)(void) { return 0; }
 #endif // X265_ARCH_ARM
 ```
 
-we just change == condition in the first line to !=
+we just change `==` condition in the first line to `!=`
 <br>
 <br>
 
