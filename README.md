@@ -33,7 +33,7 @@ sudo apt-get install intltool libappindicator-dev libdbus-glib-1-dev libglib2.0-
 
 ### 2. install nasm and meson
 
-In Debian 9 nasm and meson are too old we need newer ones:
+In Debian 9 nasm and meson are too old so we need newer ones:
 
 ```
 sudo curl -L 'http://ftp.debian.org/debian/pool/main/n/nasm/nasm_2.14-1_armhf.deb' -o /var/cache/apt/archives/nasm_2.14-1_armhf.deb && sudo dpkg -i /var/cache/apt/archives/nasm_2.14-1_armhf.deb
