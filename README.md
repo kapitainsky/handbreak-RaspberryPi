@@ -111,9 +111,9 @@ Wait unitl you see that files have been downloaded and patched. It is the first 
 
 Now we can make raspberry pi compatible:
 ```
-nano ./contrib/x265/x265_3.0/source/common/primitives.cpp
+nano ./contrib/x265/x265_3.5/source/common/primitives.cpp
 ```
-note that `x265_3.0` folder can be different e.g. `x265_3.5`. Change it accordingly. 
+note that `x265_3.5` folder can be different. Change it accordingly. 
 
 and change following section - at the end of the file:
 
@@ -152,7 +152,7 @@ and now we can start full Handbreak build
 make -j $(nproc)
 ```
 
-you can take a break - It takes time. It finishes in about 30 min on RPi 3B+, twice as long on RPi 2B+
+you can take a break - It takes time. 25 min on RPi 4. And many times longer on older RPi models. 
 <br>
 <br>
 
@@ -190,9 +190,9 @@ example:
 
 ### Sources:
 
-[https://handbrake.fr/docs/en/1.2.0/developer/install-dependencies-debian.html](https://handbrake.fr/docs/en/1.2.0/developer/install-dependencies-debian.html)
+[https://handbrake.fr/docs/en/1.3.0/developer/install-dependencies-debian.html](https://handbrake.fr/docs/en/1.3.0/developer/install-dependencies-debian.html)
 
-[https://handbrake.fr/docs/en/1.2.0/developer/build-linux.html](https://handbrake.fr/docs/en/1.2.0/developer/build-linux.html)
+[https://handbrake.fr/docs/en/1.3.0/developer/build-linux.html](https://handbrake.fr/docs/en/1.3.0/developer/build-linux.html)
 
 [https://mattgadient.com/2016/06/20/handbrake-0-10-5-nightly-and-arm-armv7-short-benchmark-and-how-to/](https://mattgadient.com/2016/06/20/handbrake-0-10-5-nightly-and-arm-armv7-short-benchmark-and-how-to/)
 
