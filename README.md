@@ -114,6 +114,7 @@ make x265
 
 Wait unitl you see that files have been downloaded and patched. It is the first thing happening. Then stop the rest by pressing CTRL-C. 
 
+Now we can make raspberry pi compatible:
 ```
 nano ./contrib/x265/x265_3.0/source/common/primitives.cpp
 ```
