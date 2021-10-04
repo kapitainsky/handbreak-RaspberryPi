@@ -57,10 +57,10 @@ sudo apt-get install meson nasm
 ### 3. get HandBreak source code
 
 ```
-git clone -b 1.4.1 https://github.com/HandBrake/HandBrake.git && cd HandBrake
+git clone -b 1.4.2 https://github.com/HandBrake/HandBrake.git && cd HandBrake
 ```
 
-to get 1.4.1 version
+to get 1.4.2 version
 
 <br>
 
